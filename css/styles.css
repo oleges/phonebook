@@ -1,0 +1,71 @@
+body {
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+#form-update-delete tr:nth-of-type(odd) {
+  background-color: #ececea;
+}
+
+th {
+  background-color: #558c89;
+  color: white;
+}
+
+td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+th, td {
+  padding: 5px;
+  text-align: left;
+  width: 150px;
+  max-width: 150px;
+}
+
+td input, td select, td button {
+  box-sizing: border-box;
+  width: 100%;
+  height: 25px;
+}
+
+#form-update-delete button {
+  width: 50%;
+  margin: 0 2px 0 2px;
+}
+
+#form-update-delete td:nth-child(8) {
+  display: flex;
+}
+
+@media screen and (max-width: 760px) {
+  table, thead, tbody, tr, th, td {
+    display: block;
+  }
+
+  thead tr {
+    display: none;
+  }
+
+  td {
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td:before {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    bottom: 5px;
+    width: 50%;
+  }
+
+  td:nth-of-type(1):before { content: "Фамилия"; }
+  td:nth-of-type(2):before { content: "Имя"; }
+  td:nth-of-type(3):before { content: "Отчество"; }
+  td:nth-of-type(4):before { content: "Дата рождения"; }
+  td:nth-of-type(5):before { content: "Город"; }
+  td:nth-of-type(6):before { content: "Улица"; }
+  td:nth-of-type(7):before { content: "Телефон"; }
+}
